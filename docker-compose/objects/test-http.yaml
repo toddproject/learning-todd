@@ -5,7 +5,7 @@ label: test-http
 spec:
     targettype: uncontrolled
     source:
-        name: docker
+        name: agent-dc
         app: http
         args: ""
     target:

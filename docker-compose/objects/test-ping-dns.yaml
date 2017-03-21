@@ -4,13 +4,10 @@ type: testrun
 label: test-ping-dns-dc
 spec:
   targettype: uncontrolled
-  target:
+  source:
     name: agent-dc
     app: ping
     args: "-c 10"
-  source:
-    name: agent-dc
-
   target:
   - 4.2.2.2
   - 8.8.8.8
