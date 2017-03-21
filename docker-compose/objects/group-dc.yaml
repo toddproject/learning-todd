@@ -1,0 +1,7 @@
+---
+type: group
+label: agent-dc
+spec:
+    group: dc
+    matches:
+    - within_subnet: "172.25.1.0/24"

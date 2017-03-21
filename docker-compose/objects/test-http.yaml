@@ -1,0 +1,13 @@
+---
+# Example test file
+type: testrun
+label: test-http
+spec:
+    targettype: uncontrolled
+    source:
+        name: agent-dc
+        app: http
+        args: ""
+    target:
+    - salesforce.com
+    - portal.office.com
