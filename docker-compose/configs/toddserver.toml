@@ -1,0 +1,51 @@
+# ToDD's API
+[API]
+Host = 0.0.0.0
+Port = 8080
+
+# Serves assets like collectors, testlets, etc.
+[Assets]
+IP = 0.0.0.0
+Port = 8090
+
+# Describes parameters for the "comms" system, which manages communications between
+# the server and the agents
+[Comms]
+User = guest                       # Username for comms
+Password = guest                   # Password for comms
+Host = rabbitmq                    # Hostname or IP address for comms
+Port = 5672                        # Port for comms
+Plugin = rabbitmq                  # Comms plugin to use (i.e. "rabbitmq")
+
+# Parameters for database connectivity
+[DB]
+Host = etcd                        # Hostname or IP address for database
+Port = 4001                        # Port for database
+Plugin = etcd                      # Database plugin to use (i.e. "etcd")
+
+# Parameters for time-series database connectivity
+[TSDB]
+Host = influxdb                    # Hostname or IP address for tsdb
+Port = 8086                        # Port for tsdb
+Plugin = influxdb                  # TSDB plugin to use (i.e. "influxdb")
+DatabaseName = todd                # Todd
+
+[Grouping]
+Interval = 10                      # Interval (in seconds) for the grouping calculation
+                                   # to run on the server
+
+[Testing]
+Timeout = 30                       # This is the timer (in seconds) that a test will be
+                                   # allowed to live
+
+# Describes parameters for local resources, such as network or filesystem resources
+[LocalResources]
+DefaultInterface = eth2            # Dictates what network interface is used for testing
+                                   # purposes (i.e. informs the todd-server which IP
+                                   # address can be used
+
+IPAddrOverride = toddserver        # Overrides DefaultInterface by providing a specific IP
+                                   # address rather
+
+OptDir = /opt/todd/agent           # Operational directory for the agent. Houses things like
+                                   # cache files, user-defined testlets, etc.

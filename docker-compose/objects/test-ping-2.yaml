@@ -1,0 +1,14 @@
+---
+# Example test file
+type: testrun
+label: test-ping
+spec:
+  targettype: group
+  source:
+    name: agent-dc
+    app: ping
+    args: "-c 10"
+  target:
+    name: agent-hq
+    app: ping
+    args: "-c 10"
